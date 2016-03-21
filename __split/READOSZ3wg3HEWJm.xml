@@ -20,7 +20,7 @@
 <ul><li>In your template, include the following where you want the mobile navigation to render:<ch value="nbsp"/></li>
 </ul><div>
 <p>```<br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>button id="simple-menu" type="button" class="navbar-toggle visible-xs pull-right collapsed" data-toggle="collapse" data-target="#sidr" aria-expanded="false"<ch value="gt"/><br/>
+<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="lt"/>button id="simple-menu" type="button" class="navbar-toggle visible-xs pull-right collapsed" data-toggle="collapse" data-target="#sidr" aria-expanded="false"<ch value="gt"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>span class="sr-only"<ch value="gt"/>Toggle navigation<ch value="lt"/>/span<ch value="gt"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>span class="icon-bar"<ch value="gt"/><ch value="lt"/>/span<ch value="gt"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>span class="icon-bar"<ch value="gt"/><ch value="lt"/>/span<ch value="gt"/><br/>
@@ -41,7 +41,7 @@
 
 <p>For example:<ch value="nbsp"/></p>
 
-<p><img alt="" data-file-id="227363349200530292" src="227363349200530292" style="vertical-align:bottom;" title="" width="1339"/></p>
+<p><img alt="" data-file-id="144988065416204308" src="144988065416204308" style="vertical-align:bottom;" title="" width="1339"/></p>
 
 <ul><li>If you need to increase or decrease the number of max-levels to render, you can change the '<em>NUMBER</em>' in <ch value="lt"/> xsl:with-param name="max-levels" select="number(<em>NUMBER</em>)" / <ch value="gt"/><ch value="nbsp"/>to what you want</li>
 	<li>End result would look like this:<ch value="nbsp"/></li>
