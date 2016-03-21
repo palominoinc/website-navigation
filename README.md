@@ -20,14 +20,14 @@ Website navigation
 
 - In your template, include the following where you want the mobile navigation to render:
 
-<div>```  
+```   
  <button id="simple-menu" type="button" class="navbar-toggle visible-xs pull-right collapsed" data-toggle="collapse" data-target="#sidr" aria-expanded="false">  
  <span class="sr-only">Toggle navigation</span>  
  <span class="icon-bar"></span>  
  <span class="icon-bar"></span>  
  <span class="icon-bar"></span>  
- </button>
-
+ </button>  
+  
  <!-- Mobile navigation -->  
  <div id="sidr">  
  <xsl:call-template name="mobile-navigation">  
@@ -39,7 +39,7 @@ Website navigation
  </div>  
  ```
 
- </div>For example:
+For example:
 
 ![](__resources/imgrj9tASp9D814.PNG)
 

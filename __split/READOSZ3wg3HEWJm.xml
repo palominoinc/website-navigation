@@ -18,16 +18,14 @@
 ```</p>
 
 <ul><li>In your template, include the following where you want the mobile navigation to render:<ch value="nbsp"/></li>
-</ul><div>
-<p>```<br/>
+</ul><p>```<ch value="nbsp"/><ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="lt"/>button id="simple-menu" type="button" class="navbar-toggle visible-xs pull-right collapsed" data-toggle="collapse" data-target="#sidr" aria-expanded="false"<ch value="gt"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>span class="sr-only"<ch value="gt"/>Toggle navigation<ch value="lt"/>/span<ch value="gt"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>span class="icon-bar"<ch value="gt"/><ch value="lt"/>/span<ch value="gt"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>span class="icon-bar"<ch value="gt"/><ch value="lt"/>/span<ch value="gt"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>span class="icon-bar"<ch value="gt"/><ch value="lt"/>/span<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>/button<ch value="gt"/></p>
-
-<p><ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>!-- Mobile navigation --<ch value="gt"/><br/>
+<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>/button<ch value="gt"/><br/><br/>
+<ch value="nbsp"/><ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>!-- Mobile navigation --<ch value="gt"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>div id="sidr"<ch value="gt"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:call-template name="mobile-navigation"<ch value="gt"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:with-param name="name" select="'topNav'" /<ch value="gt"/><br/>
@@ -37,7 +35,6 @@
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>/xsl:call-template<ch value="gt"/><br/>
 <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>/div<ch value="gt"/><br/>
 ```</p>
-</div>
 
 <p>For example:<ch value="nbsp"/></p>
 
