@@ -264,16 +264,6 @@
       <xsl:value-of select="./shorttitle | ./title"/>
     </xsl:variable>
 
-    <xsl:variable name="root_link">
-      <xsl:call-template name="create_xpath_to_node">
-        <xsl:with-param name="node_id" select="//page[@name='home']/@id"/>
-        <xsl:with-param name="web_root" select="//pages"/>
-      </xsl:call-template> 
-    </xsl:variable>
-
-    <xsl:variable name="root-page-link">
-      <a href="{$root_link}"><xsl:value-of select="//page[1]/shorttitle"/></a>
-    </xsl:variable>
     <xsl:variable name="ancestors">
       <xsl:for-each select="ancestor::page">
         <li>
