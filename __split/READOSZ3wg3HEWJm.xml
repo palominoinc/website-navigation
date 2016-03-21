@@ -15,11 +15,11 @@
 <p><img alt="" data-file-id="122446331814908261" src="122446331814908261" style="vertical-align:bottom;" title="" width="1291"/></p>
 </div>
 
-<p>For example, end result would look like this:<ch value="nbsp"/></p>
+<p>For example:<ch value="nbsp"/></p>
 
 <p><img alt="" data-file-id="227363349200530292" src="227363349200530292" style="vertical-align:bottom;" title="" width="1339"/></p>
 
-<ul><li>If you need to increase or decrease the number of max-levels to render, you can change the '<em>NUMBER</em>' in <ch value="lt"/>xsl:with-param name="max-levels" select="number(<em>NUMBER</em>)" /<ch value="gt"/><ch value="nbsp"/>to what you want</li>
+<ul><li>If you need to increase or decrease the number of max-levels to render, you can change the '<em>NUMBER</em>' in <ch value="lt"/> xsl:with-param name="max-levels" select="number(<em>NUMBER</em>)" / <ch value="gt"/><ch value="nbsp"/>to what you want</li>
 	<li>End result would look like this:<ch value="nbsp"/></li>
 </ul><p><img alt="" data-file-id="186230144324302907" src="186230144324302907" style="vertical-align:bottom;" title="" width="569"/></p>
 

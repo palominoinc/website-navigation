@@ -15,11 +15,11 @@ Website navigation
 
 <div>![](__resources/imgvK60F2UTE6Wa.PNG)
 
- </div>For example, end result would look like this:
+ </div>For example:
 
 ![](__resources/imgWZhi4iWKtM3o.PNG)
 
-- If you need to increase or decrease the number of max-levels to render, you can change the '_NUMBER_' in <xsl:with-param name="max-levels" select="number(_NUMBER_)" /> to what you want
+- If you need to increase or decrease the number of max-levels to render, you can change the '_NUMBER_' in < xsl:with-param name="max-levels" select="number(_NUMBER_)" / > to what you want
 - End result would look like this:
 
 ![](__resources/imgodvjpV_ogNny.PNG)
