@@ -9,13 +9,9 @@ Website navigation
 - Any pages that should be hidden from navigation can be to to 'show-in-menu=no'
 - In your template, include the following where you want the main navigation should render:
 
-<div> <xsl:call-template name="navigation">  
- <xsl:with-param name="name" select="'topNav'" />  
- <xsl:with-param name="root" select="//pages" />  
- <xsl:with-param name="the-chapter" select="./@name" />  
- <xsl:with-param name="max-levels" select="number(4)" />  
- </xsl:call-template>  
- </div>- In your template, include the following where you want the mobile navigation to render:
+![](_http/webTree/images/javascript.png)
+
+- In your template, include the following where you want the mobile navigation to render:
 
 <div> <button id="simple-menu" type="button" class="navbar-toggle visible-xs pull-right collapsed" data-toggle="collapse" data-target="#sidr" aria-expanded="false">  
  <span class="sr-only">Toggle navigation</span>  

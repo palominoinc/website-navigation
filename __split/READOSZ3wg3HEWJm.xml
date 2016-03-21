@@ -8,13 +8,14 @@
 	<li>Navigation name<ch value="nbsp"/>uses<ch value="nbsp"/>shorttitle of each pages under 'thecontent' and link is generated from the name of each page</li>
 	<li>Any pages that should be hidden from navigation can be to to 'show-in-menu=no'</li>
 	<li>In your template, include the following where you want the main navigation should render:<ch value="nbsp"/></li>
-</ul><div><ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="lt"/>xsl:call-template name="navigation"<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:with-param name="name" select="'topNav'" /<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:with-param name="root" select="//pages" /<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:with-param name="the-chapter" select="./@name" /<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:with-param name="max-levels" select="number(4)" /<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>/xsl:call-template<ch value="gt"/><br/>
-<ch value="nbsp"/></div>
+</ul><p><html-code><![CDATA[<pre><code>
+ <xsl:call-template name="navigation">
+                <xsl:with-param name="name" select="'topNav'" />
+                <xsl:with-param name="root" select="//pages" />
+                <xsl:with-param name="the-chapter" select="./@name" />
+                <xsl:with-param name="max-levels" select="number(4)" />
+              </xsl:call-template>
+</code></pre>]]></html-code></p>
 
 <ul><li>In your template, include the following where you want the mobile navigation to render:<ch value="nbsp"/></li>
 </ul><div>
