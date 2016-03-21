@@ -1,0 +1,64 @@
+
+@media (max-width: 767px) { 
+  /* mobile navigation*/
+  #simple-menu i.fa.fa-2.fa-bars {
+    font-size: 30px;
+    padding: 3px 6px;
+    background: #266A2E;
+    color: #fff;
+  }
+
+  #sidr.sidr ul li a[aria-expanded="false"] span.sub-arrow:before {
+    content: '+';
+    font-family: monospace;
+    font-weight: bold;
+  }
+  #sidr.sidr ul li a[aria-expanded="true"] span.sub-arrow:before {
+    content: '-';
+  }
+
+  #sidr span.sub-arrow {
+    float: right;
+  }
+  #sidr.sidr ul li a span.sub-arrow {
+    margin-top: -8px;
+    padding: 7px 13px 10px;
+    background: #ccc;
+    font-size: 20px;
+  }
+  #sidr.sidr ul li a[aria-expanded="true"] span.sub-arrow {
+    padding: 7px 16px 10px;
+  }
+
+  #sidr.sidr ul li ul li ul li a {
+    padding-left: 45px;
+  }
+  
+  #sidr.sidr ul li ul li ul li ul li a {
+    padding-left: 60px;
+  }
+
+  #sidr.sidr ul li a{
+    line-height: 17px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  #sidr.sidr ul li:hover a, #sidr.sidr ul li:hover span, #sidr.sidr ul li.active a, #sidr.sidr ul li.active span, #sidr.sidr ul li.sidr-class-active a, #sidr.sidr ul li.sidr-class-active span {
+    box-shadow: none !important;
+  }
+  
+  #sidr.sidr ul.subnav {
+    display: none;
+  }
+
+  #sidr.sidr ul li ul li:hover, #sidr.sidr ul li ul li.active, #sidr.sidr ul li ul li.sidr-class-active {
+    line-height: 17px;
+    display:block;
+  }
+  
+  #sidr.sidr ul li:hover, #sidr.sidr ul li.active, #sidr.sidr ul li.sidr-class-active {
+    line-height: 17px;
+    display:block;
+  }
+}

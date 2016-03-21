@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<stylesheet id="stylKXSK8gt1uuV9" lang="any" show-in="main" webpalschematype="wpAppStylesheet"><![CDATA[<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"
+                xmlns:fn="http://www.w3.org/2005/xpath-functions"
+                >
+
+
+  <!-- ============================== START OF NAVIGATION NODE ==================================== -->
+  <!-- ===========MAIN NAVIGATION =========== -->
+  <xsl:template name="navigation">
+    <xsl:param name="name" />
+    <xsl:param name="root"/>
+    <xsl:param name="max-levels"/>
+    <xsl:param name="root-level"/>
+    <xsl:param name="current-path"/>
+    <xsl:param name="the-chapter"/>
+    <xsl:param name="isFirst" select="'no'"/>
+
+    <xsl:variable name="the_root_level">
+      <xsl:choose>
+        <xsl:when test="$root-level = ''"><xsl:value-of select="$max-levels" /></xsl:when>
+        <xsl:otherwise><xsl:value-of select="$root-level" /></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <xsl:if test="$max-levels &gt; 0">
+      <xsl:variable name="class" select="concat('navigation_',$name,'_',string($max-levels))" />
+
+      <xsl:variable name="class2">
+        <xsl:choose>
+          <xsl:when test="$max-levels = $the_root_level">nav navbar-nav sm sm-simple collapsed navigation</xsl:when> 
+          <xsl:otherwise>dropdown-menu subnav</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+
+      <xsl:variable name="id2">
+        <xsl:choose>
+          <xsl:when test="$max-levels = $the_root_level">main-menu</xsl:when>
+          <xsl:otherwise></xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+
+      <xsl:if test="count($root/page[@show-in-menu='yes']) &gt; 0">
+        <ul class="{$class2}" id="{$id2}">
+          <xsl:for-each select="$root/page[@show-in-menu='yes']">
+
+            <xsl:variable name="path" select="concat($current-path,'/',./@name)" />
+
+            <xsl:variable name="class-active">
+              <xsl:choose>
+                <xsl:when test="$the-chapter=./@name"> active</xsl:when>
+                <xsl:otherwise></xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+
+            <xsl:variable name="class-dropdown">
+              <xsl:choose>
+                <xsl:when test="count(./page[@show-in-menu='yes']) &gt; 0">dropdown</xsl:when>
+                <xsl:otherwise>single</xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+
+            <li class="{$class-dropdown}{$class-active}">
+              <a class="" href="{$path}">
+                <xsl:value-of select="./shorttitle" />
+                <xsl:choose>
+                  <xsl:when test="count(./page[@show-in-menu='yes']) &gt; 0"><span class="caret"></span></xsl:when>
+                  <xsl:otherwise></xsl:otherwise>
+                </xsl:choose>
+              </a>
+              <xsl:if test="$max-levels &gt; 1">
+                <xsl:call-template name="navigation">
+                  <xsl:with-param name="name" select="string($name)" />
+                  <xsl:with-param name="root" select="." />
+                  <xsl:with-param name="max-levels" select="number($max-levels - 1)" />
+                  <xsl:with-param name="root-level" select="$the_root_level" />
+                  <xsl:with-param name="current-path" select="$path" />
+                  <xsl:with-param name="the-chapter" select="$the-chapter" />
+                </xsl:call-template>
+              </xsl:if>
+            </li>
+
+          </xsl:for-each>
+        </ul>
+      </xsl:if>
+    </xsl:if>
+  </xsl:template>
+
+  
+  
+
+  <!-- =========== MOBILE NAVIGATION =========== -->
+  <xsl:template name="mobile-navigation">
+    <xsl:param name="name" />
+    <xsl:param name="root"/>
+    <xsl:param name="max-levels"/>
+    <xsl:param name="root-level"/>
+    <xsl:param name="current-path"/>
+    <xsl:param name="the-chapter"/>
+    <xsl:param name="isFirst" select="'no'"/>
+
+    <xsl:variable name="the_root_level">
+      <xsl:choose>
+        <xsl:when test="$root-level = ''"><xsl:value-of select="$max-levels" /></xsl:when>
+        <xsl:otherwise><xsl:value-of select="$root-level" /></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <xsl:if test="$max-levels &gt; 0">
+      <xsl:variable name="class" select="concat('navigation_',$name,'_',string($max-levels))" />
+
+      <xsl:variable name="class2">
+        <xsl:choose>
+          <xsl:when test="$max-levels = $the_root_level">sm sm-simple</xsl:when> 
+          <xsl:otherwise>subnav</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+
+      <xsl:variable name="id2">
+        <xsl:choose>
+          <xsl:when test="$max-levels = $the_root_level">mobile-menu</xsl:when>
+          <xsl:otherwise></xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+
+      <xsl:if test="count($root/page[@show-in-menu='yes']) &gt; 0">
+        <ul class="{$class2}" id="{$id2}">
+          <xsl:for-each select="$root/page[@show-in-menu='yes']">
+
+            <xsl:variable name="path" select="concat($current-path,'/',./@name)" />
+
+            <xsl:variable name="class-active">
+              <xsl:choose>
+                <xsl:when test="$the-chapter=./@name"> active</xsl:when>
+                <xsl:otherwise></xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+
+            <xsl:variable name="class-dropdown">
+              <xsl:choose>
+                <xsl:when test="count(./page[@show-in-menu='yes']) &gt; 0">dropdown</xsl:when>
+                <xsl:otherwise>single</xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+
+            <li class="{$class-dropdown}">
+              <xsl:choose>
+                <xsl:when test="count(./page[@show-in-menu='yes'])>0">
+                  <a class="has-submenu {$class-active}" href="{$path}"><xsl:value-of select="./shorttitle" /></a>
+                </xsl:when>
+                <xsl:otherwise>
+                  <a class="{$class-active}" href="{$path}"><xsl:value-of select="./shorttitle" /></a>
+                </xsl:otherwise>
+              </xsl:choose>
+              <xsl:if test="$max-levels &gt; 1">
+                <xsl:call-template name="mobile-navigation">
+                  <xsl:with-param name="name" select="string($name)" />
+                  <xsl:with-param name="root" select="." />
+                  <xsl:with-param name="max-levels" select="number($max-levels - 1)" />
+                  <xsl:with-param name="root-level" select="$the_root_level" />
+                  <xsl:with-param name="current-path" select="$path" />
+                  <xsl:with-param name="the-chapter" select="$the-chapter" />
+                </xsl:call-template>
+              </xsl:if>
+            </li>
+          </xsl:for-each>
+        </ul>
+      </xsl:if>
+    </xsl:if>
+  </xsl:template>
+  
+  
+
+  <!-- ===========SIDE NAVIGATION =========== -->
+  <xsl:template name="side-navigation">
+    <xsl:param name="name" />
+    <xsl:param name="root"/>
+    <xsl:param name="max-levels"/>
+    <xsl:param name="root-level"/>
+    <xsl:param name="current-path"/>
+    <xsl:param name="the-chapter"/>
+
+    <xsl:variable name="the_root_level">
+      <xsl:choose>
+        <xsl:when test="$root-level = ''"><xsl:value-of select="$max-levels" /></xsl:when>
+        <xsl:otherwise><xsl:value-of select="$root-level" /></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <xsl:if test="$max-levels &gt; 0">
+
+      <xsl:variable name="class" select="concat('navigation_',$name,'_',string($max-levels))" />
+      <xsl:variable name="class2">
+        <xsl:choose>
+          <xsl:when test="$max-levels = $the_root_level">nav side-menu</xsl:when>
+          <xsl:otherwise>dropdown-menu-side</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+
+      <xsl:if test="count($root/page[@show-in-menu='yes']) &gt; 0">
+        <ul class="{$class2}" >
+          <xsl:for-each select="$root/page[@show-in-menu='yes']">
+            <xsl:variable name="path" select="concat($current-path,'/',./@name)" />
+
+            <xsl:variable name="class-active">
+              <xsl:choose>
+                <xsl:when test="$the-chapter=./@name"> active</xsl:when>
+                <xsl:otherwise></xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+
+            <xsl:variable name="class-dropdown">
+              <xsl:choose>
+                <xsl:when test="count(./page) &gt; 0">dropdown</xsl:when>
+                <xsl:otherwise>single</xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+
+            <li class="{$class-dropdown}{$class-active}">
+              <xsl:choose>
+                <xsl:when test="count(./page[@show-in-menu='yes']) &gt; 0">
+                  <a class="dropdown-toggle disabled" href="/{$path}" data-toggle="dropdown"><xsl:value-of select="./shorttitle" /> <i class="fa fa-angle-right pull-right"></i></a>
+                </xsl:when>
+                <xsl:otherwise>               
+                  <a href="/{$path}"><xsl:value-of select="./shorttitle" /></a>
+                </xsl:otherwise>
+              </xsl:choose>
+
+              <xsl:if test="$max-levels &gt; 0">
+                <xsl:call-template name="side-navigation">
+                  <xsl:with-param name="name" select="string($name)" />
+                  <xsl:with-param name="root" select="." />
+                  <xsl:with-param name="max-levels" select="number($max-levels - 1)" />
+                  <xsl:with-param name="root-level" select="$the_root_level" />
+                  <xsl:with-param name="current-path" select="$path" />
+                  <xsl:with-param name="the-chapter" select="$the-chapter" />
+                </xsl:call-template>
+              </xsl:if>
+            </li>
+
+          </xsl:for-each>
+        </ul>
+      </xsl:if>
+
+    </xsl:if>
+  </xsl:template>
+  <!-- =============================== END OF NAVIGATION NODE ==================================== -->
+
+  <xsl:template name="sidebarTitle">
+    <xsl:param name="root"/>
+
+    <xsl:if test="count($root/page[@show-in-menu='yes']) &gt; 0">
+      <div class="currentPageTitle">
+        <xsl:value-of select="./shorttitle" />
+      </div>
+    </xsl:if>
+  </xsl:template>
+
+
+
+  <!-- ============================== START OF BREADCRUMBS NODE ==================================== -->
+  <xsl:template name="breadcrumbs">
+
+    <xsl:variable name="page-title">
+      <xsl:value-of select="./shorttitle | ./title"/>
+    </xsl:variable>
+
+    <xsl:variable name="root_link">
+      <xsl:call-template name="create_xpath_to_node">
+        <xsl:with-param name="node_id" select="//page[@name='home']/@id"/>
+        <xsl:with-param name="web_root" select="//pages"/>
+      </xsl:call-template> 
+    </xsl:variable>
+
+    <xsl:variable name="root-page-link">
+      <a href="{$root_link}"><xsl:value-of select="//page[1]/shorttitle"/></a>
+    </xsl:variable>
+    <xsl:variable name="ancestors">
+      <xsl:for-each select="ancestor::page">
+        <li>
+          <xsl:variable name="link" >
+            <xsl:call-template name="create_xpath_to_node">
+              <xsl:with-param name="node_id" select="./@id"/>
+              <xsl:with-param name="web_root" select="//pages"/>
+            </xsl:call-template> 
+          </xsl:variable>
+          <a href="{$link}">
+            <xsl:value-of select="shorttitle"/>
+          </a>
+        </li>
+      </xsl:for-each>
+    </xsl:variable>
+
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs pull-right">
+      <ul class="breadcrumb">
+        <xsl:copy-of select="$ancestors"/>
+        <li class="active"><xsl:value-of select="$page-title"/></li>
+      </ul>
+    </div>
+    <!--=== End Breadcrumbs ===-->
+
+  </xsl:template>
+  <!-- ============================== END OF BREADCRUMBS  ============================== -->
+
+
+</xsl:stylesheet>]]></stylesheet>
