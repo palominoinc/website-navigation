@@ -43,7 +43,7 @@ For example:
 
 ![](__resources/imgrj9tASp9D814.PNG)
 
-- If you need to increase or decrease the number of max-levels to render, you can change the '_NUMBER_' in < xsl:with-param name="max-levels" select="number(_NUMBER_)" / > to what you want
+- If you need to increase or decrease the number of max-levels to render, you can change the '_NUMBER_' in `<xsl:with-param name="max-levels" select="number(_NUMBER_)" />` to what you want
 - End result would look like this:
 
 ![](__resources/imgodvjpV_ogNny.PNG)
