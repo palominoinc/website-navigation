@@ -8,8 +8,19 @@ Website navigation
 - Navigation name uses shorttitle of each pages under 'thecontent' and link is generated from the name of each page
 - Any pages that should be hidden from navigation can be to to 'show-in-menu=no'
 - In your template, include the following where you want the main navigation should render:
+ 
 
-![](_http/webTree/images/javascript.png)
+    <dl>
+
+
+ <xsl:call-template name="navigation">  
+ <xsl:with-param name="name" select="'topNav'" />  
+ <xsl:with-param name="root" select="//pages" />  
+ <xsl:with-param name="the-chapter" select="./@name" />  
+ <xsl:with-param name="max-levels" select="number(4)" />  
+ </xsl:call-template>
+
+`</dl>`
 
 - In your template, include the following where you want the mobile navigation to render:
 
