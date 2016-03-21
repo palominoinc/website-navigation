@@ -8,41 +8,14 @@
 	<li>Navigation name<ch value="nbsp"/>uses<ch value="nbsp"/>shorttitle of each pages under 'thecontent' and link is generated from the name of each page</li>
 	<li>Any pages that should be hidden from navigation can be to to 'show-in-menu=no'</li>
 	<li>In your template, include the following where you want the main navigation should render:<ch value="nbsp"/></li>
-</ul><pre>
-<code><ch value="lt"/>dl<ch value="gt"/></code></pre>
-
-<p><ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="lt"/>xsl:call-template name="navigation"<ch value="gt"/><br/>
-<ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="lt"/>xsl:with-param name="name" select="'topNav'" /<ch value="gt"/><br/>
-<ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="lt"/>xsl:with-param name="root" select="//pages" /<ch value="gt"/><br/>
-<ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="lt"/>xsl:with-param name="the-chapter" select="./@name" /<ch value="gt"/><br/>
-<ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="lt"/>xsl:with-param name="max-levels" select="number(4)" /<ch value="gt"/><br/>
-<ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="nbsp"/><ch value="lt"/>/xsl:call-template<ch value="gt"/></p>
-
-<p><code><ch value="lt"/>/dl<ch value="gt"/></code></p>
-
-<p><ch value="nbsp"/></p>
+</ul><p><img alt="" data-file-id="139879175313614313" src="139879175313614313" style="vertical-align:bottom;" title="" width="486"/></p>
 
 <ul><li>In your template, include the following where you want the mobile navigation to render:<ch value="nbsp"/></li>
 </ul><div>
-<p><ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>button id="simple-menu" type="button" class="navbar-toggle visible-xs pull-right collapsed" data-toggle="collapse" data-target="#sidr" aria-expanded="false"<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>span class="sr-only"<ch value="gt"/>Toggle navigation<ch value="lt"/>/span<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>span class="icon-bar"<ch value="gt"/><ch value="lt"/>/span<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>span class="icon-bar"<ch value="gt"/><ch value="lt"/>/span<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>span class="icon-bar"<ch value="gt"/><ch value="lt"/>/span<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>/button<ch value="gt"/></p>
-
-<p><ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>!-- Mobile navigation --<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>div id="sidr"<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:call-template name="mobile-navigation"<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:with-param name="name" select="'topNav'" /<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:with-param name="root" select="//pages" /<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:with-param name="the-chapter" select="./@name" /<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:with-param name="max-levels" select="number(4)" /<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>/xsl:call-template<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>/div<ch value="gt"/></p>
+<p><img alt="" data-file-id="122446331814908261" src="122446331814908261" style="vertical-align:bottom;" title="" width="1291"/></p>
 </div>
 
-<p>For example:<ch value="nbsp"/></p>
+<p>For example, end result would look like this:<ch value="nbsp"/></p>
 
 <p><img alt="" data-file-id="227363349200530292" src="227363349200530292" style="vertical-align:bottom;" title="" width="1339"/></p>
 
@@ -50,39 +23,29 @@
 	<li>End result would look like this:<ch value="nbsp"/></li>
 </ul><p><img alt="" data-file-id="186230144324302907" src="186230144324302907" style="vertical-align:bottom;" title="" width="569"/></p>
 
-<h3>Optional:</h3>
+<h2>Optional:</h2>
 
 <p>To include breadcrumbs, add the following code to<ch value="nbsp"/>your template<ch value="nbsp"/>:<ch value="nbsp"/></p>
 
-<div><ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="lt"/>xsl:call-template name="breadcrumbs"<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="lt"/>xsl:with-param name="the-chapter" select="."/<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>/xsl:call-template<ch value="gt"/></div>
-
-<p><ch value="nbsp"/></p>
+<div><img alt="" data-file-id="369849422206064160" src="369849422206064160" style="vertical-align:bottom;" title="" width="430"/></div>
 
 <p><ch value="nbsp"/>To include side navigation, add the following code to your template:<ch value="nbsp"/></p>
 
-<div><ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="lt"/>xsl:call-template name="side-navigation"<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="lt"/>xsl:with-param name="name" select="'sideNav'" /<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="lt"/>xsl:with-param name="root" select="(self::page)[1]"/<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="lt"/>xsl:with-param name="current-path" select="(self::page)/@name[1]" /<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/><ch value="lt"/>xsl:with-param name="max-levels" select="number(5)" /<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>/xsl:call-template<ch value="gt"/></div>
+<div><ch value="nbsp"/></div>
 
-<p><ch value="nbsp"/></p>
+<p><img alt="" data-file-id="110730305821635661" src="110730305821635661" style="vertical-align:bottom;" title="" width="689"/></p>
 
 <p>To add sidebar title to be current page name, add the following:</p>
 
-<div><ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:call-template name="sidebarTitle"<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>xsl:with-param name="root" select="(self::page)[1]"/<ch value="gt"/><br/>
-<ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="nbsp"/> <ch value="lt"/>/xsl:call-template<ch value="gt"/></div>
+<div><img alt="" data-file-id="100003428615597733" src="100003428615597733" style="vertical-align:bottom;" title="" width="481"/></div>
 
-<p><ch value="nbsp"/></p>
+<div><ch value="nbsp"/></div>
 
-<h3>Plugin used:</h3>
+<div><ch value="nbsp"/></div>
+
+<h2>Plugin used:</h2>
 
 <ul><li>Bootstrap 3</li>
 	<li>Sidr -<ch value="nbsp"/>https://www.berriart.com/sidr/</li>
 	<li>SmartMenu -<ch value="nbsp"/>http://www.smartmenus.org/</li>
-</ul><p><ch value="nbsp"/></p>
-</README>
+</ul></README>
