@@ -9,8 +9,7 @@ Website navigation
 - Any pages that should be hidden from navigation can be to to 'show-in-menu=no'
 - In your template, include the following where you want the main navigation should render:
 
-<div>  
- <xsl:call-template name="navigation">  
+<div> <xsl:call-template name="navigation">  
  <xsl:with-param name="name" select="'topNav'" />  
  <xsl:with-param name="root" select="//pages" />  
  <xsl:with-param name="the-chapter" select="./@name" />  
