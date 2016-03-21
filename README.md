@@ -29,13 +29,17 @@ Optional:
 
 To include breadcrumbs, add the following code to your template :
 
-<div>![](__resources/imgu1Z8DxfjSIUn.PNG)</div> To include side navigation, add the following code to your template:
+![](__resources/imgu1Z8DxfjSIUn.PNG)
 
-<div> </div>![](__resources/img3aKIdIq81jF6.PNG)
+To include side navigation, add the following code to your template:
+
+![](__resources/img3aKIdIq81jF6.PNG)
 
 To add sidebar title to be current page name, add the following:
 
-<div>![](__resources/imglTRaeSrgedUY.PNG)</div><div> </div><div> </div>Plugin used:
+![](__resources/imglTRaeSrgedUY.PNG)
+
+Plugin used:
 ------------
 
 - Bootstrap 3
