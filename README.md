@@ -1,10 +1,12 @@
 Getting started
 ===============
 
-Please refer to our [WebPal Developer Guide](https://palomino.gitbooks.io/webpaldev/content/index.html) for more information on how to use WebPal base plugins
+Please refer to our [WebPal Developer Guide](https://www.gitbook.com/book/palomino/webpaldev/details) for more information on how to use WebPal extensions
 
-- [Writing and extention](https://palomino.gitbooks.io/webpaldev/content/writing\_an\_extension.html)
-- [GitHub integration](https://palomino.gitbooks.io/webpaldev/content/github\_integration.html)
+- Writing and extension
+- GitHub integration
+
+NOTE: 'extensions-essentials' is required for all WebPal extensions
 
 Website navigation
 ==================
