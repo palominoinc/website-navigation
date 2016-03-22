@@ -1,5 +1,11 @@
 <?xml version="1.0"?>
-<README id="READOSZ3wg3HEWJm" lang="any" name="" webpalschematype="wpHtml"><h1>Website navigation</h1>
+<README id="READOSZ3wg3HEWJm" lang="any" name="" webpalschematype="wpHtml"><h1>Getting started</h1>
+
+<p>Please refer<ch value="nbsp"/>to our [WebPal Developer Guide](https://palomino.gitbooks.io/webpaldev/content/index.html) for more information on how to use WebPal base plugins</p>
+
+<ul><li>[Writing and extention](https://palomino.gitbooks.io/webpaldev/content/writing_an_extension.html)</li>
+	<li>[GitHub integration](https://palomino.gitbooks.io/webpaldev/content/github_integration.html)</li>
+</ul><h1>Website navigation</h1>
 
 <ul><li>Plugin<ch value="nbsp"/>for WebPal-powered applications</li>
 	<li>Simply<ch value="nbsp"/>add this plugin to your WebPal<ch value="nbsp"/>extensions and start using it in your template</li>

@@ -1,3 +1,11 @@
+Getting started
+===============
+
+Please refer to our [WebPal Developer Guide](https://palomino.gitbooks.io/webpaldev/content/index.html) for more information on how to use WebPal base plugins
+
+- [Writing and extention](https://palomino.gitbooks.io/webpaldev/content/writing\_an\_extension.html)
+- [GitHub integration](https://palomino.gitbooks.io/webpaldev/content/github\_integration.html)
+
 Website navigation
 ==================
 
