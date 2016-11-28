@@ -96,8 +96,10 @@
 	});
 
 	// fix collapsible menu detection for Bootstrap 3
-	$.SmartMenus.prototype.isCollapsible = function() {
-		return this.$firstLink.parent().css('float') != 'left';
-	};
+    // NOTE: commented out because it's causing issues with
+    // the menu
+	//$.SmartMenus.prototype.isCollapsible = function() {
+	//	return this.$firstLink.parent().css('float') != 'left';
+	//};
 
 })(jQuery);

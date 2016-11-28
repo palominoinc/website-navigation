@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<stylesheet id="stylKXSK8gt1uuV9" lang="any" show-in="main" webpalschematype="wpAppStylesheet"><![CDATA[<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"
+<stylesheet id="stylKXSK8gt1uuV9" lang="any" show-in="main" webpalschematype="wpAppStylesheet"><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"
                 xmlns:fn="http://www.w3.org/2005/xpath-functions"
                 >
 
@@ -172,7 +173,7 @@
 
   <!-- ===========SIDE NAVIGATION =========== -->
   <xsl:template name="side-navigation">
-    <xsl:param name="name" />
+    <xsl:param name="name"/>
     <xsl:param name="root"/>
     <xsl:param name="max-levels"/>
     <xsl:param name="root-level"/>
@@ -191,8 +192,8 @@
       <xsl:variable name="class" select="concat('navigation_',$name,'_',string($max-levels))" />
       <xsl:variable name="class2">
         <xsl:choose>
-          <xsl:when test="$max-levels = $the_root_level">nav side-menu</xsl:when>
-          <xsl:otherwise>dropdown-menu-side</xsl:otherwise>
+          <xsl:when test="$max-levels = $the_root_level">nav side-menu navbar-nav sm-vertical</xsl:when>
+          <xsl:otherwise>dropdown-menu dropdown-menu-side subnav sm-nowrap</xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
 
