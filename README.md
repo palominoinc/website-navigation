@@ -38,7 +38,7 @@ Website navigation
  <span class="icon-bar"></span>  
  </button>  
   
- <!-- Mobile navigation -->  
+ \<!-- Mobile navigation -->  
  <div id="sidr">  
  <xsl:call-template name="mobile-navigation">  
  <xsl:with-param name="name" select="'topNav'" />  
