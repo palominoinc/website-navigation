@@ -60,7 +60,7 @@
             </xsl:variable>
 
             <li class="{$class-dropdown}{$class-active}">
-              <a class="" href="{$path}">
+              <a class="item" href="{$path}">
                 <xsl:value-of select="./shorttitle" />
                 <xsl:choose>
                   <xsl:when test="count(./page[@show-in-menu='yes']) &gt; 0"><span class="caret"></span></xsl:when>
