@@ -1,7 +1,7 @@
 Getting started
 ===============
 
-Please refer to our [WebPal Developer Guide](https://www.gitbook.com/book/palomino/webpaldev/details) for more information on how to use WebPal extensions
+Please refer to our \[WebPal Developer Guide\](https://www.gitbook.com/book/palomino/webpaldev/details) for more information on how to use WebPal extensions
 
 - Writing and extension
 - GitHub integration
@@ -26,7 +26,7 @@ Website navigation
  <xsl:with-param name="the-chapter" select="./@name" />  
  <xsl:with-param name="max-levels" select="number(4)" />  
  </xsl:call-template>  
- ```
+```
 
 - In your template, include the following where you want the mobile navigation to render:
 
@@ -38,7 +38,7 @@ Website navigation
  <span class="icon-bar"></span>  
  </button>  
   
- <!-- Mobile navigation -->  
+ \<!-- Mobile navigation -->  
  <div id="sidr">  
  <xsl:call-template name="mobile-navigation">  
  <xsl:with-param name="name" select="'topNav'" />  
@@ -47,7 +47,7 @@ Website navigation
  <xsl:with-param name="max-levels" select="number(4)" />  
  </xsl:call-template>  
  </div>  
- ```
+```
 
 For example:
 
@@ -67,27 +67,27 @@ To include breadcrumbs, add the following code to your template :
  <xsl:call-template name="breadcrumbs">  
  <xsl:with-param name="the-chapter" select="."/>  
  </xsl:call-template>  
- ```
+```
 
 To include side navigation, add the following code to your template:
 
 ```  
  <xsl:call-template name="side-navigation">  
  <xsl:with-param name="name" select="'sideNav'" />  
- <xsl:with-param name="root" select="(ancestor-or-self::page)[1]"/>  
- <xsl:with-param name="current-path" select="(ancestor-or-self::page)/@name[1]" />  
- <xsl:with-param name="the-chapter" select="(ancestor-or-self::page)/@name[1]" />  
+ <xsl:with-param name="root" select="(ancestor-or-self::page)\[1\]"/>  
+ <xsl:with-param name="current-path" select="(ancestor-or-self::page)/@name\[1\]" />  
+ <xsl:with-param name="the-chapter" select="(ancestor-or-self::page)/@name\[1\]" />  
  <xsl:with-param name="max-levels" select="number(5)" />  
  </xsl:call-template>  
- ```
+```
 
 To add sidebar title to be current page name, add the following:
 
 ```  
  <xsl:call-template name="sidebarTitle">  
- <xsl:with-param name="root" select="(self::page)[1]"/>  
+ <xsl:with-param name="root" select="(self::page)\[1\]"/>  
  </xsl:call-template>  
- ```
+```
 
 Plugin used:
 ------------
